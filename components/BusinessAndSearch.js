@@ -77,7 +77,7 @@ const BusinessAndSearch = () => {
               <ChevronDown size={16} className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
             </button>
 
-            {/* List jo sab cheezon ke upar nazar ayegi */}
+           
             {isOpen && (
               <div className="absolute top-[110%] left-0 w-64 bg-white border border-gray-100 rounded-2xl shadow-2xl overflow-hidden z-[999]">
                 <div className="max-h-[280px] overflow-y-auto">

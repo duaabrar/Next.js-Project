@@ -2,10 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    /* Changes made:
-       1. 'py-10' ko badal kar 'pb-10 pt-0' kiya taake uper ka gap khatam ho jaye.
-       2. 'mt-0' add kiya ensure karne ke liye ke koi default margin na ho.
-    */
+    
     <footer className="w-full px-4 pb-10 pt-0 md:px-10 lg:px-20 bg-white font-sans mt-0">
       
       <div className="bg-[#98E9C1] rounded-[30px] p-8 md:p-12 lg:p-16">

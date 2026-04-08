@@ -55,7 +55,7 @@ const BusinessSections = () => {
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 4 },
           }}
-          className="mySwiper !overflow-visible" // Overflow visible taaki shadow/cards cut na hon
+          className="mySwiper !overflow-visible" 
         >
           {travelCompanies.map((item, index) => (
             <SwiperSlide key={index}>

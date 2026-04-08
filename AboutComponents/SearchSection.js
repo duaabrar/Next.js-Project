@@ -17,7 +17,7 @@ const SearchSection = () => {
 
   return (
     <section 
-      /* Footer ki width se match karne ke liye px-4 md:px-10 lg:px-20 use kiya hai */
+   
       className="w-full bg-white py-0 my-0 px-4 md:px-10 lg:px-20 font-sans overflow-hidden"
       style={{ height: '374.48px' }} 
     >

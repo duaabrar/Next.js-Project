@@ -33,7 +33,7 @@ const Testimonials = () => {
 
   return (
     <section className="px-6 md:px-20 bg-white pb-16">
-      {/* -mt-32 se section mazeed upar move ho jayega */}
+  
       <div className="max-w-7xl mx-auto bg-[#E7F4EF] rounded-[30px] md:rounded-[40px] py-12 md:py-16 px-6 md:px-12 relative overflow-hidden -mt-25 shadow-xl border border-white/20">
         
         <h2 className="text-2xl md:text-[36px] font-bold text-[#1A2B3B] text-center pb-10">

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { ArrowUp, ArrowRight } from 'lucide-react';
 
 const FAQ = () => {
-  const [openId, setOpenId] = useState(1); // Pehla sawal open rakhne ke liye
+  const [openId, setOpenId] = useState(1); 
 
   const faqs = [
     {

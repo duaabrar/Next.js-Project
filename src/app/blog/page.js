@@ -1,4 +1,5 @@
 import BlogSection from "../../../BlogComponents/BlogSection";
+import BuyWithConfidence from "../../../BlogComponents/BuyWithConfidence";
 import ReviewsMatter from "../../../BlogComponents/ReviewsMatter";
 
 export default function AboutPage() {
@@ -6,6 +7,7 @@ export default function AboutPage() {
     <main>
         <BlogSection />
         <ReviewsMatter />
+        <BuyWithConfidence />
     </main>
      );
 }

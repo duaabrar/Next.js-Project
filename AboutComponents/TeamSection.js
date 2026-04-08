@@ -14,7 +14,7 @@ const TeamSection = () => {
 
   return (
     <section className="py-16 bg-white border-b border-gray-100"> 
-      {/* border-b border-gray-100 adds the light border at the end */}
+     
       
       <div className="max-w-7xl mx-auto text-center px-6 md:px-20">
         <h2 className="text-3xl md:text-[36px] font-bold text-black mb-12">

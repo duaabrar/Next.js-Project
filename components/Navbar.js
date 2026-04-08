@@ -33,7 +33,7 @@ const Navbar = () => {
             <Link href="/" className="hover:text-green-600 transition-colors">Write a review</Link>
             <Link href="/" className="hover:text-green-600 transition-colors">How it Works</Link>
             <Link href="/about" className="hover:text-green-600 transition-colors">About Us</Link>
-            <Link href="/" className="hover:text-green-600 transition-colors">Blog</Link>
+            <Link href="/blog" className="hover:text-green-600 transition-colors">Blog</Link>
           </div>
 
           {/* Action Items */}
@@ -91,10 +91,10 @@ const Navbar = () => {
             <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition-colors border-b border-gray-50 pb-3">Write a review</Link>
             <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition-colors border-b border-gray-50 pb-3">How it Works</Link>
             <Link href="/about" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition-colors border-b border-gray-50 pb-3">About Us</Link>
-            <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition-colors border-b border-gray-50 pb-3">Blog</Link>
+            <Link href="/blog" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition-colors border-b border-gray-50 pb-3">Blog</Link>
             <div className="pt-2 flex flex-col gap-4">
                <Link href="/login" onClick={() => setIsOpen(false)} className="w-full text-center py-4 rounded-xl bg-gray-100 font-bold">Log In</Link>
-               <button className="w-full text-center py-4 rounded-xl bg-[#00D084] text-white font-bold">Get Started</button>
+          
             </div>
           </div>
         </div>

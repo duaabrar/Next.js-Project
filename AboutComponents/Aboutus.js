@@ -1,18 +1,36 @@
+"use client";
 import React from 'react';
-import Image from 'next/image';
 
 const AboutUs = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-24 text-center">
+    
+    <section className="bg-white py-12 md:py-16 px-4 md:px-0 flex flex-col items-center overflow-x-hidden">
       {/* Header Text */}
-      <div className="max-w-4xl mx-auto mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+      <div className="flex items-center gap-1 md:gap-3 py-4 px-2 md:px-4 lg:px-10 font-sans">
+  {/* Light Grey Text */}
+  <span className="text-[#8B93A1] text-[15px] md:text-[15px] font-light">
+    Homepage
+  </span>
+
+  {/* Dark Chevron/Arrow */}
+  <span className="text-[#1A2B3B] text-[15px] md:text-[16px] font-bold px-1">
+    &gt;
+  </span>
+
+  {/* Dark Bold Text */}
+  <span className="text-[#1A2B3B] text-[15px] md:text-[16px] font-semibold">
+    About Us
+  </span>
+</div>
+      <div className="max-w-4xl mx-auto px-6 mb-10 md:mb-12 text-center">
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
           Trusty Feedback connects people with <br className="hidden md:block" /> great local businesses.
         </h2>
       </div>
-    {/* Upper Text Section */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 md:w-1/2 leading-tight">
+
+      {/* Upper Text Section */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 flex flex-col md:flex-row justify-between items-start text-left gap-6 md:gap-8 mb-12">
+        <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 md:w-1/2 leading-tight">
           Meet Our Founder & CEO
         </h2>
         <p className="text-gray-600 text-sm md:text-base md:w-1/2 leading-relaxed">
@@ -22,53 +40,52 @@ const AboutUs = () => {
         </p>
       </div>
 
-      {/* Main Image Card */}
-      <div className=" relative">
-        <div className="rounded-[25px] overflow-hidden">
+      {/* Main Image Card - Z-Index for Floating Effect */}
+      <div className="w-full max-w-[1170px] px-6 z-20 relative">
+        <div className="rounded-[20px] md:rounded-[25px] overflow-hidden shadow-2xl">
           <img 
-            src="/uncle.png" // Apni picture ka path yahan lagayein
+            src="/uncle.png" 
             alt="Founder and CEO" 
-            className="w-[1170px] h-[489.4206px] "
+            className="w-full h-auto object-cover"
           />
         </div>
       </div>
 
       {/* Bottom Green Section */}
-      <div className="max-w-7xl mx-auto bg-[#004D31] rounded-[40px] overflow-hidden flex flex-col md:flex-row min-h-[450px]">
-        
-        {/* Left Side: Circular Graphic Area */}
-        <div className="w-full md:w-1/2 relative flex items-center justify-center p-12 overflow-hidden border-b md:border-b-0 md:border-r border-white/10">
-          {/* Animated Circles Placeholder */}
-          <div className="absolute border border-white/20 rounded-full w-64 h-64"></div>
-          <div className="absolute border border-white/10 rounded-full w-48 h-48"></div>
-          
-          <div className="z-10 text-center text-white">
-            <p className="text-xs tracking-[0.3em] font-light opacity-80 mb-2 uppercase">Your</p>
-            <h4 className="text-3xl font-bold tracking-wider uppercase">Business</h4>
-          </div>
+      <div 
+        className="w-full max-w-[1440px] bg-[#004D31] rounded-[25px] md:rounded-[40px] overflow-hidden 
+                   flex flex-col md:flex-row items-center 
+                   -mt-[100px] sm:-mt-[150px] md:-mt-[250px] 
+                   pt-[120px] sm:pt-[180px] md:pt-[280px] pb-12 md:pb-0"
+        style={{ minHeight: 'auto', height: 'auto' }} // Mobile/Tablet pe auto height
+      >
+        {/* Responsive Height for Large Screens Only */}
+        <div className="hidden lg:block" style={{ height: '635.95px' }}></div>
 
-          {/* Small Floating Avatars (Positioning logic) */}
-          <div className="absolute top-20 left-1/4 w-10 h-10 bg-gray-400 rounded-full border-2 border-white shadow-lg"></div>
-          <div className="absolute bottom-20 right-1/4 w-12 h-12 bg-gray-400 rounded-full border-2 border-white shadow-lg"></div>
-          <div className="absolute top-1/2 right-10 w-10 h-10 bg-gray-400 rounded-full border-2 border-white shadow-lg"></div>
+        {/* Left Side: Circle Images */}
+        <div className="w-full md:w-1/2 flex justify-center items-center p-6 md:p-8">
+          <img 
+            src="/Circle-Images.png" 
+            alt="Business Ecosystem" 
+            className="w-[80%] md:max-w-[80%] h-auto"
+          />
         </div>
 
         {/* Right Side: Content Area */}
-        <div className="w-full md:w-1/2 p-10 md:p-16 flex flex-col justify-center text-white">
-          <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+        <div className="w-full md:w-1/2   md:pr-20 flex flex-col justify-center items-center md:items-start text-center md:text-left text-white">
+          <h3 className="text-2xl md:text-[42px] font-bold leading-tight mb-4">
             We're Trustyfeedback, Committed to Growing Your Business!
           </h3>
-          <p className="text-gray-200 text-sm md:text-base mb-8 opacity-90 leading-relaxed">
+          <p className="text-gray-200 text-sm md:text-[16px] mb-6 opacity-90 leading-relaxed max-w-[500px]">
             At Trustyfeedback, our mission is to help your business thrive through genuine, 
             trusted reviews from real customers. We connect you with authentic feedback 
             that builds credibility, drives improvement, and enhances your reputation.
           </p>
-          <button className="bg-[#ADFF2F] hover:bg-white text-[#004D31] font-bold py-4 px-10 rounded-full w-fit transition-all duration-300 shadow-lg">
+          <button className="bg-[#04DA8D] hover:bg-white text-[#004D31] font-bold py-3 md:py-4 px-8 md:px-10 rounded-full transition-all duration-300 shadow-md">
             Get Started
           </button>
         </div>
-      
-</div>
+      </div>
       
     </section>
   );

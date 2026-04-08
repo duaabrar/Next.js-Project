@@ -2,15 +2,18 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="w-full px-4 py-10 md:px-10 lg:px-20 bg-white font-sans">
+    /* Changes made:
+       1. 'py-10' ko badal kar 'pb-10 pt-0' kiya taake uper ka gap khatam ho jaye.
+       2. 'mt-0' add kiya ensure karne ke liye ke koi default margin na ho.
+    */
+    <footer className="w-full px-4 pb-10 pt-0 md:px-10 lg:px-20 bg-white font-sans mt-0">
       
       <div className="bg-[#98E9C1] rounded-[30px] p-8 md:p-12 lg:p-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           
-        
+          {/* Logo & Vision */}
           <div className="lg:col-span-1 space-y-6">
             <div className="flex items-center">
-             
               <img 
                 src="/Logo.png" 
                 alt="Trusty Feedback Logo" 
@@ -25,7 +28,6 @@ const Footer = () => {
             <div className="space-y-4">
               <h4 className="font-bold text-[#1A2B3B]">Follow Us:</h4>
               <div className="flex gap-3">
-               
                 <a href="#" className="hover:scale-110 transition-transform">
                   <img src="/Facebook.png" alt="Facebook"  />
                 </a>
@@ -77,6 +79,7 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Other Links */}
           <div className="space-y-4">
             <h4 className="font-bold text-[#1A2B3B] text-lg">Other Links</h4>
             <ul className="space-y-2 text-[#1A2B3B] text-[15px] opacity-80">
@@ -89,7 +92,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar - Copyright Center Mein */}
+        {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-[#1A2B3B]/10 text-center">
           <p className="text-[#1A2B3B] text-[14px] font-medium opacity-80">
             © Copyright 2024 All Right Reserved By Trusty Feedback

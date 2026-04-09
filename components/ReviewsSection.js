@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { Star } from 'lucide-react';
 import Marquee from "react-fast-marquee";
@@ -98,7 +99,7 @@ const ReviewsSection = () => {
           {firstRow.map((review) => (
             <ReviewCard key={review.id} {...review} />
           ))}
-          {/* Yeh spacer pura 4 cards move hone ke baad screen khali karega */}
+         
           <div className="w-[75vw]"></div>
         </Marquee>
       </div>

@@ -30,8 +30,8 @@ const Navbar = () => {
           
           {/* Main Links - Hidden on smaller desktops/tablets to avoid crowding */}
           <div className="hidden xl:flex items-center gap-6 text-[15px] xl:text-[16px] text-[#17253F] font-normal whitespace-nowrap">
-            <Link href="/" className="hover:text-green-600 transition-colors">Write a review</Link>
-            <Link href="/" className="hover:text-green-600 transition-colors">How it Works</Link>
+            <Link href="/WriteReviewPage" className="hover:text-green-600 transition-colors">Write a review</Link>
+            <Link href="/Howitworks" className="hover:text-green-600 transition-colors">How it Works</Link>
             <Link href="/about" className="hover:text-green-600 transition-colors">About Us</Link>
             <Link href="/blog" className="hover:text-green-600 transition-colors">Blog</Link>
           </div>
@@ -88,8 +88,8 @@ const Navbar = () => {
               <button onClick={() => setActiveTab('consumer')} className={`flex-1 h-full rounded-full text-sm font-bold ${activeTab === 'consumer' ? 'bg-[#17253F] text-white' : ''}`}>Consumer</button>
             </div>
 
-            <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition-colors border-b border-gray-50 pb-3">Write a review</Link>
-            <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition-colors border-b border-gray-50 pb-3">How it Works</Link>
+            <Link href="/WriteReviewPage" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition-colors border-b border-gray-50 pb-3">Write a review</Link>
+            <Link href="/Howitworks" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition-colors border-b border-gray-50 pb-3">How it Works</Link>
             <Link href="/about" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition-colors border-b border-gray-50 pb-3">About Us</Link>
             <Link href="/blog" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition-colors border-b border-gray-50 pb-3">Blog</Link>
             <div className="pt-2 flex flex-col gap-4">

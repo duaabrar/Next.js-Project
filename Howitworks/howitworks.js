@@ -5,7 +5,7 @@ const TrustyFeedbackPage = () => {
     
     <div className="font-sans text-slate-900 bg-white">
       
-      {/* SECTION 1: HERO SECTION */}
+  
       <section className="py-16 px-4 text-center max-w-6xl mx-auto">
         <nav className="text-sm text-gray-500 mb-4">
           Homepage &gt; <span className="text-gray-900">How it Works</span>
@@ -15,7 +15,7 @@ const TrustyFeedbackPage = () => {
           A platform where customers rate businesses, sharing reviews to guide others and help companies improve.
         </p>
         <div className="rounded-2xl overflow-hidden shadow-sm max-w-5xl mx-auto">
-          {/* Replace src with your "Screenshot (392)" main image */}
+         
           <img 
             src="/FullScreen.png" 
             alt="Team working" 
@@ -23,7 +23,7 @@ const TrustyFeedbackPage = () => {
         </div>
       </section>
 
-      {/* SECTION 2: HOW DO REVIEWS GET ON... */}
+    
       <section className="py-16 px-4 max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-6">How do reviews get on Trusty Feedback?</h2>
         <div className="space-y-4 text-gray-600 leading-relaxed">

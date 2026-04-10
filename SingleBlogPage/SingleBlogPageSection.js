@@ -76,7 +76,7 @@ const SingleBlogPage = () => {
         </div>
       </section>
 
-      {/* 4. Conclusion Section (Light Green Box) */}
+      {/* 4. Conclusion Section*/}
       <section className="px-4 max-w-4xl mx-auto my-16">
         <div className="bg-[#E9F5F1] rounded-[32px] p-8 md:p-12">
           <h2 className="text-2xl font-bold mb-4 text-[#1A2B3B]">Conclusion</h2>

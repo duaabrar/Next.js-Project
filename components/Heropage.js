@@ -131,7 +131,7 @@ export default function HeroSection() {
             {[...categories, ...categories].map((cat, index) => (
               <div 
                 key={index}
-                onClick={() => handleCategorySelect(cat.name)} // Marquee items par bhi link click kaam karega
+                onClick={() => handleCategorySelect(cat.name)} 
                 className="flex-shrink-0 flex flex-col items-center justify-center bg-white border border-gray-100 rounded-[24px] cursor-pointer shadow-sm hover:border-[#00D084] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 w-[160px] lg:w-[200px] h-[130px] lg:h-[160px]"
               >
                 <div className="w-12 h-12 lg:w-14 lg:h-14 mb-3 flex items-center justify-center">

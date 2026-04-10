@@ -8,7 +8,7 @@ import {
 
 const CategoryCard = ({ title, icon: Icon, items, headerBg }) => (
   <div className="bg-[#F3F7FA] rounded-[32px] overflow-hidden flex flex-col h-full border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-    {/* Header */}
+    
     <div className={`${headerBg} p-6 flex items-center gap-3 text-white`}>
       <div className="bg-white/20 p-2 rounded-lg">
         <Icon size={24} />
@@ -16,7 +16,7 @@ const CategoryCard = ({ title, icon: Icon, items, headerBg }) => (
       <h3 className="font-bold text-lg">{title}</h3>
     </div>
     
-    {/* List Items */}
+    
     <div className="p-2 flex flex-col">
       {items.map((item, idx) => (
         <button 
@@ -49,11 +49,11 @@ const CategoryPage = () => {
     { title: "Animal & Pets", icon: Dog, headerBg: "bg-[#99D9BD]", items: ["Animal Health", "Animal Parks & Zoo", "Cats & Dogs", "Horses & Riding", "Pet Services", "Pet Stores"] },
     { title: "Events & Entertainment", icon: Music, headerBg: "bg-[#1E293B]", items: ["Adult Entertainment", "Children's Entertainment", "Clubbing & Nightlife", "Gaming", "Museums & Exhibits", "Music & Movies"] },
     { title: "Home & Garden", icon: Flower2, headerBg: "bg-[#064E3B]", items: ["Bathroom & Kitchen", "Cultural Goods", "Decoration & Interior", "Fabric & Stationery", "Furniture Stores", "Garden & Pond"] },
-    // Testing ke liye duplicate data (taake page 2 nazar aaye)
+
     { title: "New Tech", icon: Sparkles, headerBg: "bg-[#99D9BD]", items: ["AI Tools", "Software", "Hardware", "Cloud", "Gadgets", "Mobile"] },
   ];
 
-  // --- LOGIC: PAGINATION ---
+  
   const itemsPerPage = 9;
   const totalPages = Math.ceil(allCategories.length / itemsPerPage);
   

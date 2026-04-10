@@ -5,19 +5,19 @@ const AboutUs = () => {
   return (
     
     <section className="bg-white py-12 md:py-16 px-4 md:px-0 flex flex-col items-center overflow-x-hidden">
-      {/* Header Text */}
+
       <div className="flex items-center gap-1 md:gap-3 py-4 px-2 md:px-4 lg:px-10 font-sans">
-  {/* Light Grey Text */}
+
   <span className="text-[#8B93A1] text-[15px] md:text-[15px] font-light">
     Homepage
   </span>
 
-  {/* Dark Chevron/Arrow */}
+
   <span className="text-[#1A2B3B] text-[15px] md:text-[16px] font-bold px-1">
     &gt;
   </span>
 
-  {/* Dark Bold Text */}
+
   <span className="text-[#1A2B3B] text-[15px] md:text-[16px] font-semibold">
     About Us
   </span>
@@ -40,7 +40,7 @@ const AboutUs = () => {
         </p>
       </div>
 
-      {/* Main Image Card - Z-Index for Floating Effect */}
+  
       <div className="w-full max-w-[1170px] px-6 z-20 relative">
         <div className="rounded-[20px] md:rounded-[25px] overflow-hidden shadow-2xl">
           <img 
@@ -51,15 +51,15 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* Bottom Green Section */}
+  
       <div 
         className="w-full max-w-[1440px] bg-[#004D31] rounded-[25px] md:rounded-[40px] overflow-hidden 
                    flex flex-col md:flex-row items-center 
                    -mt-[100px] sm:-mt-[150px] md:-mt-[250px] 
                    pt-[120px] sm:pt-[180px] md:pt-[280px] pb-12 md:pb-0"
-        style={{ minHeight: 'auto', height: 'auto' }} // Mobile/Tablet pe auto height
+        style={{ minHeight: 'auto', height: 'auto' }} 
       >
-        {/* Responsive Height for Large Screens Only */}
+     
         <div className="hidden lg:block" style={{ height: '635.95px' }}></div>
 
         {/* Left Side: Circle Images */}

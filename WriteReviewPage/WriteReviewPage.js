@@ -9,12 +9,43 @@ const WriteReviewPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [rating, setRating] = useState(0);
 
+  // --- NEW STATES FOR VALIDATION ---
+  const [formData, setFormData] = useState({
+    title: "",
+    comment: ""
+  });
+  const [errors, setErrors] = useState({});
+
   const categories = [
     { name: "Electronics", image: "/slogo.png" },
     { name: "Food", image: "/slogo.png" },
     { name: "Services", image: "/slogo.png" },
     { name: "Shopping", image: "/slogo.png" },
   ];
+
+  // --- VALIDATION LOGIC ---
+  const validateForm = () => {
+    let newErrors = {};
+    if (!formData.title.trim()) newErrors.title = "Title is required";
+    if (!formData.comment.trim()) newErrors.comment = "Review comment is required";
+    else if (formData.comment.length < 10) newErrors.comment = "Review must be at least 10 characters";
+    if (rating === 0) newErrors.rating = "Please select a star rating";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      console.log("Form Submitted Successfully!", { ...formData, rating, selectedCategory });
+      alert("Review submitted successfully!");
+      // Reset form if needed
+      setFormData({ title: "", comment: "" });
+      setRating(0);
+      setErrors({});
+    }
+  };
 
   return (
     <div className="w-full min-h-screen bg-white font-sans py-8 md:py-12 px-4">
@@ -94,7 +125,6 @@ const WriteReviewPage = () => {
             </h2>
             
             <div className="relative w-full flex justify-center mt-auto">
-                {/* Responsive Hidden: Yeh card mobile pe nazar nahi ayega */}
                 <div className="absolute left-0 top-0 bg-white p-3 rounded-2xl shadow-xl z-20 w-[160px] text-left hidden lg:block">
                    <div className="flex items-center gap-2 mb-2">
                         <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-[10px] text-white">★</div>
@@ -106,18 +136,12 @@ const WriteReviewPage = () => {
                    </div>
                 </div>
 
-                {/* Main Young Man Image (Always Visible) */}
                 <img 
                   src="/Young-man.png" 
                   alt="Reviewer" 
                   className="w-[250px] sm:w-[300px] md:w-[400px] object-contain relative z-10"
                 />
                 
-                {/* Extra Decoration Images (Hidden on Mobile) */}
-                <div className="absolute top-15 left-10 hidden lg:block z-20">
-            <img src="/Vector (6).png" alt="customer rating" className="w-20" /> 
-        </div>
-
                <div className="absolute top-24 right-5 hidden lg:block z-20">
             <img src="/Rating.png" alt="detailed review" className="w-24" /> 
         </div>
@@ -126,7 +150,7 @@ const WriteReviewPage = () => {
 
           {/* RIGHT FORM SIDE */}
           <div className="lg:w-[55%] p-6 md:p-12 lg:p-16 flex flex-col justify-center bg-[#F1F5F9]">
-            <form onSubmit={(e) => { e.preventDefault(); }} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               
               <div>
                 <label className="block text-[#1A2B3B] text-sm font-bold mb-2">
@@ -134,10 +158,12 @@ const WriteReviewPage = () => {
                 </label>
                 <input 
                   type="text" 
-                  required
+                  value={formData.title}
+                  onChange={(e) => setFormData({...formData, title: e.target.value})}
                   placeholder="Summarize your review in few words"
-                  className="w-full h-14 px-6 bg-white border border-gray-100 rounded-2xl outline-none focus:ring-2 focus:ring-[#00D084]/20 transition-all text-gray-700 placeholder:text-gray-300 shadow-sm"
+                  className={`w-full h-14 px-6 bg-white border ${errors.title ? 'border-red-500' : 'border-gray-100'} rounded-2xl outline-none focus:ring-2 focus:ring-[#00D084]/20 transition-all text-gray-700 placeholder:text-gray-300 shadow-sm`}
                 />
+                {errors.title && <p className="text-red-500 text-xs mt-1 ml-2">{errors.title}</p>}
               </div>
 
               <div>
@@ -145,21 +171,29 @@ const WriteReviewPage = () => {
                   Write Review<span className="text-red-500 ml-0.5">*</span>
                 </label>
                 <textarea 
-                  required
+                  value={formData.comment}
+                  onChange={(e) => setFormData({...formData, comment: e.target.value})}
                   placeholder="Enter comments"
-                  className="w-full h-40 p-6 bg-white border border-gray-100 rounded-[24px] md:rounded-[32px] outline-none focus:ring-2 focus:ring-[#00D084]/20 transition-all text-gray-700 placeholder:text-gray-300 shadow-sm resize-none"
+                  className={`w-full h-40 p-6 bg-white border ${errors.comment ? 'border-red-500' : 'border-gray-100'} rounded-[24px] md:rounded-[32px] outline-none focus:ring-2 focus:ring-[#00D084]/20 transition-all text-gray-700 placeholder:text-gray-300 shadow-sm resize-none`}
                 />
+                {errors.comment && <p className="text-red-500 text-xs mt-1 ml-2">{errors.comment}</p>}
               </div>
 
               {/* Rating Section */}
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 py-2">
-                <span className="text-gray-600 text-sm font-bold">How do you rate?</span>
+                <div className="flex flex-col">
+                  <span className="text-gray-600 text-sm font-bold">How do you rate?</span>
+                  {errors.rating && <span className="text-red-500 text-[10px]">{errors.rating}</span>}
+                </div>
                 <div className="flex gap-1">
                   {[1,2,3,4,5].map((star) => (
                     <button 
                       key={star} 
                       type="button"
-                      onClick={() => setRating(star)}
+                      onClick={() => {
+                        setRating(star);
+                        if(errors.rating) setErrors({...errors, rating: null});
+                      }}
                       className={`w-9 h-9 md:w-10 md:h-10 rounded-lg flex items-center justify-center transition-colors ${rating >= star ? 'bg-[#00D084] text-white' : 'bg-[#99D9BD] text-white hover:bg-[#00D084]'}`}
                     >
                       <Star size={18} fill={rating >= star ? "white" : "none"} />

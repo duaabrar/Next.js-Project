@@ -26,11 +26,7 @@ export default function FaqGrid() {
 
   return (
     <section className="bg-[#E7F4EF] py-12 md:py-20 px-4 sm:px-6 flex justify-center">
-      {/* - grid-cols-1: Mobile par 1 column
-          - sm:grid-cols-2: Tablet aur Desktop par 2 columns
-          - gap-4: Mobile par thoda kam gap
-          - md:gap-6: Tablet/Desktop par zyada gap
-      */}
+   
       <div className="max-w-5xl w-full grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
         {faqData.map((item, index) => (
           <div 

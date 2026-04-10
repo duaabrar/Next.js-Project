@@ -20,35 +20,36 @@ const BusinessAndSearch = () => {
 
   return (
     <section className="w-full px-4 md:px-10 lg:px-20 py-16 space-y-20">
-      
-      {/* --- Business Section --- */}
-      <div className="max-w-[1200px] mx-auto bg-[#17253F] rounded-[40px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
-        <div className="w-full md:w-1/2 space-y-6 z-10">
-          <h2 className="text-white text-3xl md:text-4xl lg:text-[38px] font-bold lg:w-[551.29833984375px] lg:ml-17">
-            Own a Business? Sign Up Now & Gain Genuine Reviews!
-          </h2>
-          <p className="text-white/70 text-sm md:text-base lg:w-[551.29833984375px] lg:ml-17">
-            Register with us to build trust through authentic reviews. Showcase your services, engage with your audience, and grow your reputation.
-          </p>
-          <button className="bg-[#00D084] text-[#17253F] font-bold py-3 px-10 rounded-full hover:scale-105 transition-transform duration-300 lg:ml-17">
-            Get Started
-          </button>
-        </div>
+    
+<div className="max-w-[1200px] mx-auto bg-[#17253F] rounded-[40px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
+  <div className="w-full md:w-1/2 space-y-6 z-10">
+    <h2 className="text-white text-3xl md:text-4xl lg:text-[38px] font-bold lg:w-[551.29833984375px] lg:ml-17">
+      Own a Business? Sign Up Now & Gain Genuine Reviews!
+    </h2>
+    <p className="text-white/70 text-sm md:text-base lg:w-[551.29833984375px] lg:ml-17">
+      Register with us to build trust through authentic reviews. Showcase your services, engage with your audience, and grow your reputation.
+    </p>
+    <button className="bg-[#00D084] text-[#17253F] font-bold py-3 px-10 rounded-full hover:scale-105 transition-transform duration-300 lg:ml-17">
+      Get Started
+    </button>
+  </div>
 
-        <div className="w-full md:w-1/2 mt-10 md:mt-0 relative flex justify-center md:justify-end">
-          <div className="absolute -right-18 top-15 z-20 w-[183.00225830078125px] h-[197.23399353027344px]">
-             <img src="/YB.png" alt="Business Interface" />
-          </div>
-          <div className="relative z-10">
-             <img src="/TP.png" alt="Business Interface" />
-             <div className="absolute top-65 -left-27 z-30">
-               <img src="/Top rated.png" alt="Business Interface" />
-             </div>
-          </div>
-        </div>
-      </div>
+  <div className="w-full md:w-1/2 mt-10 md:mt-0 relative flex justify-center md:justify-end">
+    <div className="hidden lg:block absolute -right-18 top-15 z-20 w-[183.00225830078125px] h-[197.23399353027344px]">
+       <img src="/YB.png" alt="Business Interface" />
+    </div>
+    
+    <div className="relative z-10">
+       <img src="/TP.png" alt="Business Interface" />
+       
+       <div className="hidden lg:block absolute top-65 -left-27 z-30">
+         <img src="/Top rated.png" alt="Business Interface" />
+       </div>
+    </div>
+  </div>
+</div>
 
-      {/* --- Search Section --- */}
+
       <div className="max-w-[800px] mx-auto text-center space-y-8">
         <div className="space-y-2">
           <h3 className="text-[#17253F] text-2xl md:text-4xl font-bold">
@@ -59,7 +60,7 @@ const BusinessAndSearch = () => {
           </p>
         </div>
 
-        {/* --- SEARCH BAR WITH LOGO & DROPDOWN --- */}
+   
         <div className="relative flex items-center bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] rounded-full p-2 max-w-[800px] mx-auto border border-gray-100">
           
           <div className="relative">
@@ -67,7 +68,7 @@ const BusinessAndSearch = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="flex items-center gap-2 px-4 md:px-6 py-3 border-r border-gray-100 text-gray-600 font-medium shrink-0 hover:bg-gray-50 transition-colors rounded-l-full"
             >
-              {/* Category Logo Added Here */}
+          
               <img 
                 src="/slogo.png" 
                 alt="Logo" 

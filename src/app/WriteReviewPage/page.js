@@ -1,3 +1,4 @@
+"use client";
 import WriteReviewPage from "../../../WriteReviewPage/WriteReviewPage";
 
 export default function AboutPage() {

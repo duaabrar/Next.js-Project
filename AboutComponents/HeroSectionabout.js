@@ -41,7 +41,7 @@ const HeroSectionabout = () => {
             </svg>
           </div>
 
-          {/* Main Team Image */}
+    
           <img 
             src="/medium-Shortman.png" 
             alt="Connecting Consumers and Businesses" 

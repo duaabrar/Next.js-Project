@@ -22,10 +22,9 @@ const TeamSection = () => {
         </h2>
       </div>
 
-      {/* Marquee Container */}
       <div className="relative flex overflow-x-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
-          {/* First set of images */}
+       
           {teamMembers.map((member) => (
             <div 
               key={member.id} 
@@ -38,7 +37,7 @@ const TeamSection = () => {
               />
             </div>
           ))}
-          {/* Duplicate set for seamless looping */}
+         
           {teamMembers.map((member) => (
             <div 
               key={`dup-${member.id}`} 
@@ -54,7 +53,7 @@ const TeamSection = () => {
         </div>
       </div>
 
-      {/* Custom Tailwind Animation Styles */}
+    
       <style jsx>{`
         @keyframes marquee {
           0% { transform: translateX(0); }

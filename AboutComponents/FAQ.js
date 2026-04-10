@@ -41,7 +41,7 @@ const FAQ = () => {
   return (
     <section className="bg-white py-16 px-6 md:px-20">
       <div className="max-w-4xl mx-auto">
-        {/* Header Section */}
+   
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-[42px] font-bold text-[#1A2B3B] mb-4">
             Frequently Asked Questions
@@ -51,7 +51,7 @@ const FAQ = () => {
           </p>
         </div>
 
-        {/* Accordion List */}
+  
         <div className="space-y-4">
           {faqs.map((faq) => (
             <div 
@@ -66,7 +66,7 @@ const FAQ = () => {
                   {faq.question}
                 </span>
                 
-                {/* Dynamic Icon Circle */}
+           
                 <div className={`flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full transition-all duration-300 ${openId === faq.id ? 'bg-gray-200 text-gray-600' : 'bg-[#00D690] text-white rotate-0'}`}>
                   {openId === faq.id ? (
                     <ArrowUp className="w-4 h-4 md:w-5 md:h-5" />
@@ -76,7 +76,7 @@ const FAQ = () => {
                 </div>
               </button>
 
-              {/* Answer Section with Animation */}
+       
               <div className={`overflow-hidden transition-all duration-300 ${openId === faq.id ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
                 <p className="text-gray-600 text-[15px] md:text-base leading-relaxed pr-12 pb-4">
                   {faq.answer}

@@ -3,9 +3,18 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import BusinessCard from "./BusinessCard";
-
+import Link from 'next/link';
 const cardsData = [
-  { id: 1, title: "Trip Insure", website: "www.businesstoolkit.com", rating: "4.9", reviews: "7891", logoIcon: "/Cloudy-logo.png", logoText: "Cloudly" },
+  { 
+    id: 1, 
+    title: "Trip Insure", 
+    website: "www.businesstoolkit.com", 
+    rating: "4.9", 
+    reviews: "7891", 
+    logoIcon: "/Cloudy-logo.png", 
+    logoText: "Cloudly",
+    detailsLink: "/" 
+  },
   { id: 2, title: "The Business Kit", website: "www.businesstoolkit.com", rating: "4.9", reviews: "7891", logoIcon: "/Camera.png", logoText: "Camera" },
   { id: 3, title: "Cafe Nostra Cosa", website: "www.businesstoolkit.com", rating: "4.9", reviews: "7891", logoIcon: "/Cloudy-logo.png", logoText: "Cloudly" },
   { id: 4, title: "SadaPay Banking", website: "www.businesstoolkit.com", rating: "4.8", reviews: "7891", logoIcon: "/Camera.png", logoText: "Camera" },
@@ -27,7 +36,7 @@ export default function TopPicks() {
           infiniteLoop={true}
           autoPlay={false}
           emulateTouch={true}
-         
+          
           renderIndicator={(onClickHandler, isSelected, index) => {
             if (isSelected) {
               return (
@@ -78,7 +87,6 @@ export default function TopPicks() {
           bottom: 0 !important;
           margin-top: 20px !important;
         }
-        /* Mobile pe agar cards stretch ho rahe hon toh ye fix karega */
         .carousel .slide img {
             width: auto !important;
             display: inline-block !important;

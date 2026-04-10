@@ -32,7 +32,7 @@ const SearchSection = () => {
             </p>
           </div>
 
-          {/* --- SEARCH BAR --- */}
+     
           <div className="relative flex items-center bg-white shadow-[0_10px_40px_rgba(0,0,0,0.2)] rounded-full p-2 max-w-[800px] mx-auto border border-white/10 w-full">
             
             <div className="relative">
@@ -50,7 +50,7 @@ const SearchSection = () => {
                 <ChevronDown size={16} className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
               </button>
 
-              {/* Dropdown Menu */}
+          
               {isOpen && (
                 <>
                   <div 

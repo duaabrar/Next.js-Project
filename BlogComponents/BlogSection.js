@@ -6,7 +6,7 @@ const BlogSection = () => {
   return (
     <section className="w-full bg-white font-sans overflow-hidden">
       
-      {/* --- HERO / BREADCRUMB SECTION --- */}
+      
       <div className="pt-10 pb-16 px-4 md:px-10 lg:px-20 text-center relative">
         <div className="absolute top-0 left-0 w-64 h-64 bg-[#F0FDF4] rounded-full blur-3xl opacity-50 -z-10"></div>
         <div className="absolute top-0 right-0 w-64 h-64 bg-[#F0F9FF] rounded-full blur-3xl opacity-50 -z-10"></div>
@@ -22,7 +22,7 @@ const BlogSection = () => {
         </h1>
       </div>
 
-      {/* --- TRENDS IN TRUST SECTION --- */}
+      
       <div className="px-4 md:px-10 lg:px-20 pb-20">
         
         <div className="flex justify-between items-end mb-10">
@@ -34,7 +34,7 @@ const BlogSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           
-          {/* LEFT SIDE: Large Feature Card */}
+          
           <div className="bg-[#F3F7FA] rounded-[32px] overflow-hidden p-6 flex flex-col h-full">
             <div className="rounded-2xl overflow-hidden mb-6 h-[300px]">
               <img 
@@ -59,14 +59,14 @@ const BlogSection = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE: Mini Cards List */}
+          
           <div className="flex flex-col gap-8">
             {[
               {
                 title: "Romance scams: Spot the signs",
                 img: "/Rectangle1b.png",
                 desc: "The prevalence of influencers in our daily lives means we see them everywhere.",
-                link: "/SingleBlogPageMy" // Yahan apne naye page ka path likhein
+                link: "/SingleBlogPageMy" 
               },
               {
                 title: "Holiday hoaxes: How scammers take advantage of the holiday.",
@@ -93,7 +93,7 @@ const BlogSection = () => {
                     {blog.desc}
                   </p>
                   
-                  {/* Anchor tag used for navigation */}
+                  
                   <a 
                     href={blog.link} 
                     className="flex items-center gap-2 text-[#1A2B3B] font-bold text-xs pt-1 hover:underline cursor-pointer"

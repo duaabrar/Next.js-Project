@@ -100,7 +100,7 @@ const ReviewsSection = () => {
             <ReviewCard key={review.id} {...review} />
           ))}
          
-          <div className="w-[75vw]"></div>
+          <div className="w-[100vw]"></div>
         </Marquee>
       </div>
 

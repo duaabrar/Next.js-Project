@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import BusinessCard from './BusinessCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -31,7 +32,7 @@ const BusinessSections = () => {
             Best in Travel Insurance Company
           </h2>
           
-          {/* Buttons with unique classes */}
+          
           <div className="flex gap-3">
             <button className="travel-prev w-10 h-10 rounded-full bg-[#00D084] flex items-center justify-center text-white hover:opacity-80 transition-all cursor-pointer z-10">
               <span className="text-xl">‹</span>
@@ -46,7 +47,6 @@ const BusinessSections = () => {
           modules={[Navigation]}
           spaceBetween={24}
           slidesPerView={1}
-          // Navigation link properly
           navigation={{
             prevEl: '.travel-prev',
             nextEl: '.travel-next',
@@ -65,7 +65,7 @@ const BusinessSections = () => {
         </Swiper>
       </div>
 
-      {/* Bank Companies - MARQUEE */}
+
       <div className="max-w-[1400px] mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-[28px] md:text-[32px] font-bold text-[#17253F]">
@@ -75,7 +75,6 @@ const BusinessSections = () => {
 
         <div className="relative flex overflow-hidden group">
           <div className="flex animate-marquee gap-6 py-4">
-            {/* Double the array for seamless scrolling */}
             {[...bankCompanies, ...bankCompanies].map((item, index) => (
               <div key={index} className="w-[280px] md:w-[320px] flex-shrink-0">
                 <BusinessCard {...item} />

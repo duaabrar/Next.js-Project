@@ -22,14 +22,16 @@ const BusinessAndSearch = () => {
     <section className="w-full px-4 md:px-10 lg:px-20 py-16 space-y-20">
     
 <div className="max-w-[1200px] mx-auto bg-[#17253F] rounded-[40px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
-  <div className="w-full md:w-1/2 space-y-6 z-10">
-    <h2 className="text-white text-3xl md:text-4xl lg:text-[38px] font-bold lg:w-[551.29833984375px] lg:ml-17">
+ <div className="w-full md:w-1/2 space-y-6 z-10 flex flex-col items-start">
+    <h2 className="text-white text-3xl md:text-4xl lg:text-[38px] font-bold max-w-full lg:max-w-[550px]">
       Own a Business? Sign Up Now & Gain Genuine Reviews!
     </h2>
-    <p className="text-white/70 text-sm md:text-base lg:w-[551.29833984375px] lg:ml-17">
+    
+    <p className="text-white/70 text-sm md:text-base max-w-full lg:max-w-[500px]">
       Register with us to build trust through authentic reviews. Showcase your services, engage with your audience, and grow your reputation.
     </p>
-    <button className="bg-[#00D084] text-[#17253F] font-bold py-3 px-10 rounded-full hover:scale-105 transition-transform duration-300 lg:ml-17">
+    
+    <button className="bg-[#00D084] text-[#17253F] font-bold py-3 px-10 rounded-full hover:scale-105 transition-transform duration-300">
       Get Started
     </button>
   </div>

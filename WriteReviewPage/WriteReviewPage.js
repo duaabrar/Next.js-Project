@@ -9,7 +9,7 @@ const WriteReviewPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [rating, setRating] = useState(0);
 
-  // --- NEW STATES FOR VALIDATION ---
+ 
   const [formData, setFormData] = useState({
     title: "",
     comment: ""
@@ -23,7 +23,7 @@ const WriteReviewPage = () => {
     { name: "Shopping", image: "/slogo.png" },
   ];
 
-  // --- VALIDATION LOGIC ---
+
   const validateForm = () => {
     let newErrors = {};
     if (!formData.title.trim()) newErrors.title = "Title is required";
@@ -40,7 +40,6 @@ const WriteReviewPage = () => {
     if (validateForm()) {
       console.log("Form Submitted Successfully!", { ...formData, rating, selectedCategory });
       alert("Review submitted successfully!");
-      // Reset form if needed
       setFormData({ title: "", comment: "" });
       setRating(0);
       setErrors({});
@@ -117,7 +116,6 @@ const WriteReviewPage = () => {
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col lg:flex-row bg-[#F1F5F9] rounded-[30px] md:rounded-[40px] overflow-hidden shadow-sm border border-gray-100">
           
-          {/* LEFT GREEN SIDE */}
           <div className="lg:w-[45%] bg-[#05442E] p-8 md:p-14 flex flex-col items-center text-center relative overflow-hidden">
             <p className="text-white text-sm md:text-base mb-2">Can't Wait to Read Your Thoughts!</p>
             <h2 className="text-white text-[24px] md:text-[36px] font-bold leading-tight mb-8 md:mb-12">

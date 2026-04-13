@@ -111,7 +111,7 @@ const WriteReviewPage = () => {
       </div>
 
       {/* --- MAIN CARD SECTION --- */}
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1100px] mx-auto">
         <div className="flex flex-col lg:flex-row bg-[#F1F5F9] rounded-[30px] md:rounded-[40px] overflow-hidden shadow-sm border border-gray-100">
           
           {/* GREEN LEFT SIDE - 45% WIDTH */}

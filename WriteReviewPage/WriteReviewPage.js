@@ -9,7 +9,6 @@ const WriteReviewPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [rating, setRating] = useState(0);
 
- 
   const [formData, setFormData] = useState({
     title: "",
     comment: ""
@@ -22,7 +21,6 @@ const WriteReviewPage = () => {
     { name: "Services", image: "/slogo.png" },
     { name: "Shopping", image: "/slogo.png" },
   ];
-
 
   const validateForm = () => {
     let newErrors = {};
@@ -116,6 +114,7 @@ const WriteReviewPage = () => {
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col lg:flex-row bg-[#F1F5F9] rounded-[30px] md:rounded-[40px] overflow-hidden shadow-sm border border-gray-100">
           
+          {/* GREEN LEFT SIDE - 45% WIDTH */}
           <div className="lg:w-[45%] bg-[#05442E] p-8 md:p-14 flex flex-col items-center text-center relative overflow-hidden">
             <p className="text-white text-sm md:text-base mb-2">Can't Wait to Read Your Thoughts!</p>
             <h2 className="text-white text-[24px] md:text-[36px] font-bold leading-tight mb-8 md:mb-12">
@@ -146,7 +145,7 @@ const WriteReviewPage = () => {
             </div>
           </div>
 
-          {/* RIGHT FORM SIDE */}
+          {/* GREY FORM SIDE - 55% WIDTH */}
           <div className="lg:w-[55%] p-6 md:p-12 lg:p-16 flex flex-col justify-center bg-[#F1F5F9]">
             <form onSubmit={handleSubmit} className="space-y-6">
               

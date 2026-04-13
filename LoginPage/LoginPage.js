@@ -42,8 +42,8 @@ const LoginSection = () => {
           {/* LEFT SIDE PANEL */}
           <div className="lg:w-[48%] bg-[#05442E] p-10 md:p-14 flex flex-col items-start justify-start relative overflow-hidden">
             <h2 className="text-white text-[25px] md:text-[28px] lg:text-[28px] font-bold relative z-10  mb-6">
-              Be Part of the <br />
-              Millions Giving <br />
+              Be Part of the 
+              Millions Giving 
               Feedback Daily!
             </h2>
             <div className="relative z-10">
